@@ -4,15 +4,20 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Login</title>
+<title>Insert title here</title>
 </head>
 <body>
-		
 	<h2>Login Here</h2>
 	
 	<%
-		if(request.getAttribute("error")!=null){
-			out.println(request.getAttribute("error"));
+		if(request.getAttribute("LogOutMsg")!=null){
+			out.println(request.getAttribute("LogOutMsg"));
+		}	
+	%>
+	
+	<%
+		if(request.getAttribute("LoginMsg")!=null){
+			out.println(request.getAttribute("LoginMsg"));
 		}	
 	%>
 	
@@ -21,7 +26,7 @@
 		Email<input type="text" name="email"/>
 		Password<input type="password" name="password"/>
 		<input type="submit" value="login"/>
-	
+		
 	</form>
 </body>
 </html>

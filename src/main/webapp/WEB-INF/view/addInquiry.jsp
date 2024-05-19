@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+    <%@ include  file="home.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,16 +10,14 @@
 </head>
 <body>
 	
-	<h2>Enter Student Details</h2>
-	
-	
+	<h2>Enter Student Details</h2>		
 	<%
-		if(request.getAttribute("Update")!=null){
-			out.println(request.getAttribute("Update"));
+		if(request.getAttribute("AddMsg")!=null){
+			out.println(request.getAttribute("AddMsg"));
 		}	
 	%>
 	
-	<form action="addEnquiry" method="post">
+	<form action="addInquiry" method="post">
 	
 		<pre>
 		
@@ -25,13 +25,10 @@
 			Email<input type="text" name="email"/>
 			phNumber<input type="text" name="phNumber"/>
 			Course<input type="text" name="course"/>
-			<input type="submit" value="AddEnquery"/>
+			<input type="submit" value="AddInquery"/>
 		
 		</pre>
 	
 	</form>
-	
-	 <jsp:include page="delete_Enquiry.jsp" />
-	
 </body>
 </html>
